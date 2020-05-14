@@ -1,0 +1,18 @@
+h2 Visa alla notes
+
+/ p = session["notes"]
+
+form action="/notes/delete" method="POST"
+ 
+  button type="submit" value="delete" Ta bort alla
+
+- if session["notes"]
+  - session["notes"].each do |note|
+    h3 #{note[1]}
+    p #{note[0]}
+    p by #{note[2]}
+
+- else
+    p  
+      | Det finns inga notes ännu. 
+      a href="/notes/new" Skapa ny

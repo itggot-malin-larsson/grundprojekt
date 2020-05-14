@@ -1,0 +1,8 @@
+h2 Formulär för ny note
+
+form action="/notes/create" method="POST"
+  h1 Rubrik:
+  input type="text" name="Rubrik"
+  h1 Text
+  input type="text" name="ny_note"
+  button type="submit" value="#{session['user']}" name="user" Skapa
